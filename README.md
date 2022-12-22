@@ -1,7 +1,15 @@
-# NodeMonitor is a simple Python Flask website that makes calls to Bitcoin (bitcoind) and Lightning Network (c-lightning lightningd) nodes and displays the results on a simple 'dashboard' style status page.
+# NodeMonitor is a simple Python Flask website that makes calls to a Liquid node (elements-qt or elementsd) using RPC and displays the results on a simple 'dashboard' style status page.
 
-If you prefer to work with **Django** there is a completed and working Django version [here](https://github.com/wintercooled/NodeMonitor-Python-Django).
+Set RPC details for your node in config.py
 
-This Flask version is work in progress - I don't have much time to spemd on it right now :-| 
+To use testnet Liquid use the config here (remove RPC username and password to use cookie auth instead): [https://liquidtestnet.com](https://liquidtestnet.com)
 
-Update: https://twitter.com/MattoshiN has written a version of the NodeMonitor-Python-Django dash in Flask that uses LND instead of c-lightning here: https://github.com/M-D-Br/FlaskBitcoinDashboard
+Install requirements and run:
+
+```
+pip install -r requirements.txt
+
+flask run
+```
+
+Browse to http://127.0.0.1:5000
