@@ -1,6 +1,6 @@
-# Liquid NodeMonitor
+# Liquid Node Monitor Dashboard
 
-Liquid NodeMonitor is a simple Python Flask website that makes calls to a Liquid node (elements-qt or elementsd) using RPC and displays the results on a simple 'dashboard' style status page. It can also be used to query a Bitcoin Core node.
+Liquid Node Monitor Dashboard is a simple Python Flask website that makes calls to a Liquid node (elements-qt or elementsd) using RPC and displays the results on a simple 'dashboard' style status page. It can also be used to query a Bitcoin Core node.
 
 Set RPC details for your node in config.py
 
