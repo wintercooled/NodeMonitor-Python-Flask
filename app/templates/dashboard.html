@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="refresh" content="600" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
 
 .circle-base {
@@ -29,8 +30,8 @@
 }
 
 body {
-font-family: Tahoma, Geneva, sans-serif;
-font-size: 22px;
+font-family: "Poppins", Tahoma, Geneva, sans-serif;
+font-size: 20px;
 letter-spacing: 1px;
 word-spacing: 0px;
 color: #000000;
@@ -105,7 +106,7 @@ tr:last-child {
   </tr>
 
   <tr>
-    <td class="first-row-col">Running</td>
+    <td class="first-row-col">RPC Connected</td>
     <td class="first-row-col">
     {% if liquid.running %}
       <div class="circle-base ok"></div>
@@ -116,7 +117,7 @@ tr:last-child {
   </tr>
 
   <tr>
-    <td>Network</td>
+    <td>Network Connected</td>
     <td>
     {% if liquid.online %}
       <div class="circle-base ok"></div>
@@ -124,6 +125,11 @@ tr:last-child {
       <div class="circle-base notok"></div>
     {% endif %}
     </td>
+  </tr>
+
+  <tr>
+    <td>Network</td>
+    <td>{{ liquid.chain }}</td>
   </tr>
 
   <tr>
