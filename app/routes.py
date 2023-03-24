@@ -21,10 +21,12 @@ def dashboard():
             liquid.online = True
         liquid.block_height = rpc_connection.getblockcount()
         network_info = rpc_connection.getnetworkinfo()
+        blockchain_info = rpc_connection.getblockchaininfo()
         liquid.peer_count = network_info["connections"]
         liquid.version = network_info["subversion"]
         liquid.version = liquid.version.replace("/", "")
         liquid.version = liquid.version.replace("Elements Core:", "")
+        liquid.chain = blockchain_info["chain"]
     except Exception as e:
         liquid.message = "An error occured. Mouseover to see."
         liquid.message_details = str(e)
@@ -38,5 +40,6 @@ class LiquidViewData:
         self.peer_count = 0
         self.block_height = 0
         self.version = ""
+        self.chain = ""
         self.message = ""
         self.message_details = ""
